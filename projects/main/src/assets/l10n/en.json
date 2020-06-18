@@ -1,0 +1,28 @@
+﻿{
+  "menu": {
+    "AdminApi": "Admin"
+  },
+  "enums": {
+    "AdminUserTheme": {
+      "Light": "Light",
+      "Dark": "Dark"
+    }
+  },
+  "resources": {
+    "/AdminApi/AdminUserSearch": {
+      "name": "AdminUser",
+      "fields": {
+        "id": "Id",
+        "name": "Name",
+        "email": "Email",
+        "pass": "Pass",
+        "language": "Language",
+        "allowIpAddress": "Allow Ip Address",
+        "status": "Status",
+        "no": "No",
+        "theme": "Theme",
+        "isSuper": "Is Super"
+      }
+    }
+  }
+}

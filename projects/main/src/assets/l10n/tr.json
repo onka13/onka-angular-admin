@@ -1,0 +1,28 @@
+﻿{
+  "menu": {
+    "AdminApi": "Yönetim"
+  },
+  "enums": {
+    "AdminUserTheme": {
+      "Light": "Açık",
+      "Dark": "Koyu"
+    }
+  },
+  "resources": {
+    "/AdminApi/AdminUserSearch": {
+      "name": "AdminUser",
+      "fields": {
+        "id": "Id",
+        "name": "Name",
+        "email": "Email",
+        "pass": "Pass",
+        "language": "Language",
+        "allowIpAddress": "Allow Ip Address",
+        "status": "Status",
+        "no": "No",
+        "theme": "Theme",
+        "isSuper": "Is Super"
+      }
+    }
+  }
+}
