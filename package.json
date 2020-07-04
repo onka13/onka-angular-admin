@@ -23,7 +23,7 @@
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
     "lodash": "^4.17.15",
-    "onka-angular-admin-core": "0.0.1",
+    "onka-angular-admin-core": "file:../onka-angular-libs/dist/onka-angular-admin-core",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

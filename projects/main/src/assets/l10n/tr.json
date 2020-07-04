@@ -23,6 +23,13 @@
         "theme": "Theme",
         "isSuper": "Is Super"
       }
+    },
+    "/AdminApi/AdminRoleSearch": {
+      "name": "Admin Role",
+      "fields": {
+        "id": "Id",
+        "name": "Name"
+      }
     }
   }
 }
