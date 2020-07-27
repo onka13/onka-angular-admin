@@ -6,7 +6,7 @@ import { OnkaListComponent, UIManagerService } from 'onka-angular-admin-core';
   selector: 'app-admin-user-search',
   template: `<onka-list [pageConfig]="pageConfig">
     <ng-template #rowExtra let-row="row">
-      <a mat-icon-button (click)="openRoles(row.id)">Roles</a>
+      <a mat-icon-button (click)="openRoles(row)">Roles</a>
     </ng-template>
   </onka-list>`,
 })
@@ -19,19 +19,26 @@ export class AdminUserSearchComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {}
 
-  openRoles(id) {
-    this.uiManager.openDialog({
-      position: {
-        right: "0"
+  openRoles(row) {
+    if (row.isSuper) {
+      return this.uiManager.displayMessage('Super Admin', 'info');
+    }
+    this.uiManager.openDialog(
+      {
+        position: {
+          right: '0',
+        },
+        data: {
+          title: 'Roles',
+          toolbar: true,
+          url: '/AdminApi/AdminUserSearch/roleAssign/' + row.id,
+        },
       },
-      data: {
-        title: 'Roles',
-        toolbar: true, 
-        url: '/AdminApi/AdminUserSearch/roleAssign/' + id       
-      }
-    }, (result) => {}, {
-      width: "400px",
-      height: "100vh"
-    });
+      (result) => {},
+      {
+        width: '400px',
+        height: '100vh',
+      },
+    );
   }
 }

@@ -12,11 +12,11 @@ export class AdminUserSearchUpsertComponent implements OnInit, AfterViewInit {
   inputColumns;
   initialValues = {
     status: adminApiEnums.Status.Active,
-    theme: adminApiEnums.AdminUserTheme.Light
+    theme: adminApiEnums.AdminUserTheme.Light,
   };
-  constructor(onkaService: OnkaService)
-  {
-    this.inputColumns = onkaService.getUpsertInputColumns(pageConfig);
+  constructor(onkaService: OnkaService) {
+    var fields = onkaService.getUpsertInputColumns(pageConfig);
+    this.inputColumns = fields;
   }
 
   ngOnInit() {}

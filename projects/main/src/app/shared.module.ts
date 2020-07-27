@@ -6,7 +6,6 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PortalModule } from '@angular/cdk/portal';
 import { OnkaSharedModule, MaterialModule } from 'onka-angular-admin-core';
-import { OnkaReferenceComponent } from './panel/modules/adminApi/pages/admin-user-search/admin-user-role-assign.component';
 
 const sharedModules: any[] = [
   CommonModule,
@@ -20,7 +19,6 @@ const sharedModules: any[] = [
   OnkaSharedModule,
 ];
 const sharedComponents: any[] = [
-  OnkaReferenceComponent
 ];
 
 @NgModule({
